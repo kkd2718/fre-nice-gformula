@@ -1,0 +1,32 @@
+# Bayesian FRE-NICE g-formula — Python dependencies
+# Tested on Python 3.10+ (recommended: 3.10.x or 3.11.x), Windows 11 / Ubuntu 22.04
+#
+# Pinned versions (production reproduction):
+#   python==3.10.12
+#   jax==0.4.30, jaxlib==0.4.30 (CUDA 12.2)
+#   numpyro==0.13.2
+#   torch==2.1.0 (used by src/models/spline_glmm.py NCS basis QR-orthonormalization)
+# For frozen environment: see environment.yml (future work)
+
+# Core scientific stack
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Bayesian inference (JAX-based)
+jax>=0.4.20,<0.11.0
+jaxlib>=0.4.20,<0.11.0
+numpyro>=0.13.0
+
+# Spline basis construction (NCS QR-orthonormalization)
+torch>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities
+tqdm>=4.65.0
+joblib>=1.3.0
+arviz>=0.16.0
