@@ -91,7 +91,7 @@ $\tau \sim \mathrm{HalfCauchy}(0, 2.5)$, and $\Omega \sim \mathrm{LKJ}(\eta = 2)
 Marginal dose–response of mechanical power on 28-day mortality, M3 (rank-5
 functional Y-RE). Reference: bin 7 ≈ 9.3 J/min.
 
-![Dose–response under M3 with 95% credible interval](results/figures/fig3_dose_response.png)
+![Dose–response under M3 with 95% credible interval](results/figures/fig3_dose_response_J5.png)
 
 | MP exposure (J/min) | Marginal HR (95% CrI) | $P(\mathrm{HR}>1)$ |
 |---|---|---|
@@ -102,7 +102,7 @@ functional Y-RE). Reference: bin 7 ≈ 9.3 J/min.
 
 Cohort flow diagram (MIMIC-IV → analysis cohort) :
 
-![STROBE-style cohort flow](results/figures/fig1_flow_diagram.png)
+![STROBE-style cohort flow](results/figures/fig1_cohort_flow.png)
 
 ### Model comparison (cluster-level WAIC + paired SE_diff)
 
@@ -132,8 +132,14 @@ definitive causal-contrast preference evidence (thesis §Ⅲ.6, §Ⅳ.4).
 fre-nice-gformula/
 ├── data/                            # Cohort CSV (NOT committed — PhysioNet credentialed)
 ├── results/
-│   ├── figures/                     # Manuscript figures (PNG)
-│   └── tables/                      # Reproducible tables (Markdown)
+│   ├── figures/                     # 8 manuscript figures (PNG): fig1 cohort flow,
+│   │                                # fig2 4-spec forest, fig3 dose-response (M3),
+│   │                                # fig4 RMST 2-panel, fig5 per-day HR, fig6 LOCO bar,
+│   │                                # fig7 Case-1/2 PPC, fig8 severity stratum dose-response
+│   └── tables/                      # 9 reproducible tables (Markdown): T1 baseline,
+│                                    # T2 4-spec ladder, T3 full dose-response, T4 RMST,
+│                                    # T5 per-day HR, T6 LOCO, T7 WAIC, T8 PPC,
+│                                    # TS1 severity stratum
 ├── scripts/
 │   ├── run_bayesian_main.py         # NUTS fit runner; single-spec (M1/M2/M3/M4) execution
 │   ├── run_chain.sh                 # Full pipeline: M3 + sensitivity + LOCO + subgroups
